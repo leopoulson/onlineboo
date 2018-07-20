@@ -5,6 +5,10 @@ const SDK_GLOBAL = 'Mixcloud';
 
 
 class Mixcloud extends Component {
+    load (url) {
+        getSDk
+    }
+
     render() {
         return (
             <iframe id="mixcloud-iframe"/>
