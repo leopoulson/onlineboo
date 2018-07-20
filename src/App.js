@@ -4,9 +4,11 @@ import Buttons from './Buttons.js';
 import './App.css';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
+        
         <div className="Content">
           <div className="SideBar">
             <img src={boopic} className="LogoStyle" alt="boo"/>
