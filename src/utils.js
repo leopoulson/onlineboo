@@ -1,3 +1,5 @@
+import loadScript from 'load-script'
+
 // Util function to load an external SDK
 // or return the SDK if it is already loaded
 const resolves = {}
@@ -32,3 +34,5 @@ export function getSDK (url, sdkGlobal, sdkReady = null, isLoaded = () => true, 
     })
   })
 }
+
+export default getSDK;
