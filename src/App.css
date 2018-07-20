@@ -1,5 +1,5 @@
 .App {
-  /*text-align: center;*/
+  text-align: center;
 }
 
 .App-logo {
@@ -34,20 +34,34 @@
 }
 
 .SideBar {
-  /*position: fixed;
-  left: 300px;
-  top: 125px;
-  width: 100px;
-  max-width: 300px;*/
-
   float: left;
   width: 40%;
-  background-color: red;
 }
 
 .ShowBar {
   float: right;
   width: 60%;
+}
+
+div.buttons {
+    width: 100%;
+    text-align: center;
+}
+
+button.button {
+    display:inline-block;
+    background-color: white;
+    color: black;
+    border: 1px solid #e7e7e7;
+    transition-duration: 0.4s;
+}
+
+button.button:hover {
+    background-color: #e7e7e7;
+}
+
+button.button:focus {
+    outline:0;
 }
 
 @keyframes App-logo-spin {
