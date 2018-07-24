@@ -5,8 +5,14 @@ import './App.css';
 
 class App extends Component {
   getUploads() {
-    //so the API hook is this https://api.mixcloud.com/spartacus/cloudcasts/
+    //so the API hook is this https://api.mixcloud.com/planetboo/cloudcasts/
+    var xmlHttp = new XMLHttpRequest();
+    var url = "https://api.mixcloud.com/planetboo/cloudcasts/";
+    xmlHttp.open("GET", url, false);
+    xmlHttp.send(null);
+    console.log(xmlHttp.responseText);
   }
+
   render() {
     return (
       <div className="App">
@@ -14,6 +20,7 @@ class App extends Component {
           <div className="SideBar">
             <img src={boopic} className="LogoStyle" alt="boo"/>
             <Buttons/>
+            <button onClick={() => this.getUploads()} className="button">uploads</button>
           </div>
           <div className="ShowBar">
           </div>
