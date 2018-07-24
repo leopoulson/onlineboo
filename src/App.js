@@ -17,11 +17,15 @@ class App extends Component {
     var response = this.getResponse();
     var responseParsed = JSON.parse(response);
     var shows = responseParsed.data;
+
+    for (var i = 0; i < shows.length; i++) {
+      console.log(shows[i]);
+    }
   }
 
   render() {
     this.getUploads();
-    
+
     return (
       <div className="App">
         <div className="Content">
