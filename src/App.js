@@ -4,16 +4,23 @@ import Buttons from './Buttons.js';
 import './App.css';
 
 class App extends Component {
-  getUploads() {
+  getResponse() {
     //so the API hook is this https://api.mixcloud.com/planetboo/cloudcasts/
     var xmlHttp = new XMLHttpRequest();
     var url = "https://api.mixcloud.com/planetboo/cloudcasts/";
     xmlHttp.open("GET", url, false);
     xmlHttp.send(null);
-    console.log(xmlHttp.responseText);
+    return(xmlHttp.responseText);
+  }
+
+  getUploads() {
+    var response = this.getResponse();
+    var responseParsed = JSON.parse(response);
+    var shows = responseParsed.data;
   }
 
   render() {
+    this.getUploads();
     return (
       <div className="App">
         <div className="Content">
