@@ -4,6 +4,9 @@ import Buttons from './Buttons.js';
 import './App.css';
 
 class App extends Component {
+  getUploads() {
+    //so the API hook is this https://api.mixcloud.com/spartacus/cloudcasts/
+  }
   render() {
     return (
       <div className="App">
