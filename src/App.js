@@ -21,13 +21,13 @@ class App extends Component {
 
   render() {
     this.getUploads();
+    
     return (
       <div className="App">
         <div className="Content">
           <div className="SideBar">
             <img src={boopic} className="LogoStyle" alt="boo"/>
             <Buttons/>
-            <button onClick={() => this.getUploads()} className="button">uploads</button>
           </div>
           <div className="ShowBar">
           </div>
