@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Show from './Show.js'
 import './App.css';
 
 class Shows extends Component {
