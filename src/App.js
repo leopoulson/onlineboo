@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import boopic from './boopic.jpg';
 import Buttons from './Buttons.js';
+import Shows from './Shows.js';
 import './App.css';
 
 class App extends Component {
