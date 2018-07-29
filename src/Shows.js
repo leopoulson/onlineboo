@@ -25,13 +25,13 @@ class Shows extends Component {
     }
 
     renderShow(props) {
-        return <Show/>
+        return <Show data={props}></Show>
     }
 
     render (){
         var shows = this.getUploads();
         return (<div>
-            {shows.map(() => this.renderShow())}
+            {shows.map((show) => this.renderShow(show))}
          </div>);
         }
     }

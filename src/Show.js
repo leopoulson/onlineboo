@@ -8,7 +8,8 @@ class Show extends Component {
 
     render () {
         return (
-        <div> Show </div>);
+        <div> {this.props.data.name} </div>
+        );
     }
 }
 export default Show;
