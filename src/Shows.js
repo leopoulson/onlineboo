@@ -20,12 +20,21 @@ class Shows extends Component {
         for (var i = 0; i < shows.length; i++) {
             console.log(shows[i]);
         }
+
+        return shows;
+    }
+
+    renderShow(props) {
+        return <Show/>
     }
 
     render (){
-        this.getUploads();
-        return null;
+        var shows = this.getUploads();
+        return (<div>
+            {shows.map(() => this.renderShow())}
+         </div>);
+        }
     }
-}
+
 
 export default Shows;
