@@ -43,6 +43,19 @@
   width: 60%;
 }
 
+div.show {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e7e7e7;
+  border-style: solid;
+  margin-top: 2px;
+  transition-duration: 0.4s;
+}
+
+div.show:hover {
+  border-color: #ffffff;
+}
+
 div.buttons {
     width: 100%;
     text-align: center;
