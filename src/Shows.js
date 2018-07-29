@@ -17,10 +17,6 @@ class Shows extends Component {
         var responseParsed = JSON.parse(response);
         var shows = responseParsed.data;
 
-        for (var i = 0; i < shows.length; i++) {
-            console.log(shows[i]);
-        }
-
         return shows;
     }
 

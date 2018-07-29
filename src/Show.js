@@ -8,7 +8,7 @@ class Show extends Component {
 
     render () {
         return (
-        <div> {this.props.data.name} </div>
+        <div data-mixcloud-play-button={this.props.data.key}> {this.props.data.name} </div>
         );
     }
 }

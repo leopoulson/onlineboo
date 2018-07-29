@@ -16,7 +16,6 @@ class App extends Component {
                     <div className="ShowBar">
                         <Shows/>
                     </div>
-                    <div data-mixcloud-play-button="/planetboo/planet-bootyshakers/">Click 4 bootyshakers</div>
                 </div>
             </div>
             );
