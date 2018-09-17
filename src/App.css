@@ -47,7 +47,7 @@ div.buttons {
 
 img.thumbnail {
     height: 100%;
-    
+    float: left;
 }
 
 button.button {

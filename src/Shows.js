@@ -4,7 +4,7 @@ import './App.css';
 
 class Shows extends Component {
     getResponse() {
-        //so the API hook is this https://api.mixcloud.com/planetboo/cloudcasts/
+        //so the API url is this https://api.mixcloud.com/planetboo/cloudcasts/
         var xmlHttp = new XMLHttpRequest();
         var url = "https://api.mixcloud.com/planetboo/cloudcasts/";
         xmlHttp.open("GET", url, false);
