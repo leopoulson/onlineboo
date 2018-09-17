@@ -11,7 +11,9 @@ class Show extends Component {
         return (
         <div className="show" data-mixcloud-play-button={this.props.data.key}> 
             <img className="thumbnail" src={this.props.data.pictures.large}/>
-            {this.props.data.name} 
+            <div className="showName">
+                {this.props.data.name} 
+            </div>
         </div>
         
         );
