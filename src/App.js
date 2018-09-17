@@ -5,8 +5,13 @@ import Shows from './Shows.js';
 import './App.css';
 
 class App extends Component {
-    render() {
+    loadShow() {
+        player.load("planetboo/planet-boo-late-nite/", true).then(function(){
 
+        });
+    }
+
+    render() {
         return (
             <div className="App">
             <script src="//widget.mixcloud.com/media/js/widgetApi.js" type="text/javascript"/>
@@ -16,17 +21,16 @@ class App extends Component {
                         <Buttons/>
                     </div>
                     <div className="ShowBar">
-                        <Shows/>
+                        <Shows onClick={this.loadShow()}/>
                     </div>
                 </div>
                 <div name="mixcloud-widget"> 
                     <script src="//widget.mixcloud.com/media/js/widgetApi.js" type="text/javascript"></script>
                     <iframe id="mixcloud-iframe" title="mixcloud-iframe"/>
                     <script type="text/javascript">
-                    var widget = Mixcloud.PlayerWidget(document.getElementById("mixcloud-iframe"));
-                    widget.ready.then(function() {
-                        // Put code that interacts with the widget here
-                    });
+                        var player = Mixcloud.PlayerWidget(document.getElementById("mixcloud-iframe"));
+                        player.ready.then(function(result, error) {    
+                        });
                 </script>
                 </div>
             </div>

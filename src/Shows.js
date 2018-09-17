@@ -24,7 +24,7 @@ class Shows extends Component {
         return <Show data={props}></Show>
     }
 
-    render (){
+    render () {
         var shows = this.getUploads();
         return (<div>
             {shows.map((show) => this.renderShow(show))}

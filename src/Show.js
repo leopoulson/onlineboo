@@ -3,7 +3,6 @@ import './App.css';
 
 class Show extends Component {
     constructor(props) {
-        console.log(props);
         super(props);
     }
 
