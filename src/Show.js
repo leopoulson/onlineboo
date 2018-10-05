@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Show extends Component {
-    constructor(props) {
-        console.log(props);
+    constructor(props) { 
         super(props);
     }
 
@@ -11,7 +10,7 @@ class Show extends Component {
         return (
         <div className="show" data-mixcloud-play-button={this.props.data.key}> 
             <img className="thumbnail" src={this.props.data.pictures.large}/>
-            <div className="showName">
+            <div className="showName" vertical-align="top">
                 <p className="showNameText">
                     {this.props.data.name} 
                 </p>
