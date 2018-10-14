@@ -9,7 +9,9 @@ class Show extends Component {
     render () {
         return (
         <div className="show" data-mixcloud-play-button={this.props.data.key}> 
-            <img className="thumbnail" src={this.props.data.pictures.large}/>
+            <div className="thumbnailBox">
+                <img className="thumbnail" src={this.props.data.pictures.large}/>
+            </div>
             <div className="showName" vertical-align="top">
                 <p className="showNameText">
                     {this.props.data.name} 
