@@ -8,7 +8,7 @@ class Show extends Component {
 
     parseLength(length) {
         var strLength = "";
-        var minutes = (~~(length / 60)) % 60;
+        var minutes = (~~(length / 60)) % 60; 
         var hours = ~~(length / 3600); //truncated division
 
         if (hours > 0) {
@@ -37,8 +37,8 @@ class Show extends Component {
                         </p>
                     </div>
                     <div name="information">
-                        <div name="time">
-                            <p>
+                        <div name="time" className="showTime">
+                            <p className="showTimeText">
                                 {this.parseLength(this.props.data.audio_length)}
                             </p>
                         </div>
