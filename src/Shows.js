@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Show from './Show.js'
 import './App.css';
+import './Shows.css';
 
 class Shows extends Component {
     getResponse() {
@@ -29,6 +30,7 @@ class Shows extends Component {
         var shows = this.getUploads();
         return (<div>
             {shows.map((show) => this.renderShow(show))}
+            <div className="emptyShow" />
          </div>);
         }
     }

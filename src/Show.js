@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Show.css';
 
 class Show extends Component {
     constructor(props) { 
@@ -8,15 +8,20 @@ class Show extends Component {
 
     render () {
         return (
-        <div className="show" data-mixcloud-play-button={this.props.data.key}> 
-            <div className="thumbnailBox">
-                <img className="thumbnail" src={this.props.data.pictures.large}/>
+        <div>
+            <div className="show" data-mixcloud-play-button={this.props.data.key}> 
+                <div className="thumbnailBox">
+                    <img className="thumbnail" src={this.props.data.pictures.large}/>
+                </div>
+                <div className="showContent">
+                    <div className="showName">
+                        <p className="showNameText">
+                            {this.props.data.name} 
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="showName" vertical-align="top">
-                <p className="showNameText">
-                    {this.props.data.name} 
-                </p>
-            </div>
+            <div className="showDivider"/>
         </div>
         );
     }
