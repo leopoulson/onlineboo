@@ -6,6 +6,23 @@ class Show extends Component {
         super(props);
     }
 
+    parseLength(length) {
+        var strLength = "";
+        var minutes = (~~(length / 60)) % 60;
+        var hours = ~~(length / 3600); //truncated division
+
+        if (hours > 0) {
+            strLength += hours; //convert hours to string
+            strLength += "h";
+        }
+        strLength += " "
+        
+        if (minutes > 0)
+            strLength += (minutes);
+
+        return strLength;
+    }
+
     render () {
         return (
         <div>
@@ -18,6 +35,13 @@ class Show extends Component {
                         <p className="showNameText">
                             {this.props.data.name} 
                         </p>
+                    </div>
+                    <div name="information">
+                        <div name="time">
+                            <p>
+                                {this.parseLength(this.props.data.audio_length)}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
