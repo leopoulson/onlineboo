@@ -4,7 +4,19 @@ import './Show.css';
 class Show extends Component {
     constructor(props) { 
         super(props);
+
         this.hue = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
+        this.state = { y: 0 }
+    }
+
+    setHue() {
+        return this.hue + this.state.y * 5;
+    }
+
+    _onMouseMove(e) {
+        this.setState({ y: e.screenY });
+        console.log(e.screenY);
+        // this.render();
     }
 
     parseLength(length) {
@@ -28,7 +40,8 @@ class Show extends Component {
     render () {
         return (
         <div>
-            <div style={{background: "hsl(" + this.hue + ", 14%, 80%)"}} className="show" data-mixcloud-play-button={this.props.data.key}> 
+            <div style={{background: "hsl(" + this.setHue() + ", 14%, 80%)"}} onMouseMove = {this._onMouseMove.bind(this)}
+                 className="show" data-mixcloud-play-button={this.props.data.key}> 
                 <div className="thumbnailBox">
                     <img className="thumbnail" src={this.props.data.pictures.large}/>
                 </div>
@@ -47,6 +60,7 @@ class Show extends Component {
                     </div>
                 </div>
             </div>
+
             <div className="showDivider"/>
         </div>
         );
