@@ -1,8 +1,13 @@
+body {
+  font-family: Peace, sans-serif;
+  font-size: 110%;
+}
+
 div.show {
   width: 100%;
   height: 70px;
   border: 1px solid #e7e7e7;
-  background: #ffffff;
+  /*background: hsl(14, 14%, 80%);*/
   border-style: solid;
   transition-duration: 0.4s;
 }
@@ -24,25 +29,25 @@ div.showContent {
 }
 
 div.showName {
-  /*position: absolute;*/
-
-  /*height: 40px;*/
-  width: 100%;
+  width: 300px;
+  position: absolute;
+  left: 5px;
 }
 
 div.showTime {
-  /*width: 40px;
-  height: 20px;*/
+  width: 50px;
   position: absolute;
-  top: 25px;
+  top: 30px;
+  left: 5px;
 }
 
 p.showNameText {
-  font-family: Verdana;
+  text-align: left;
 }
 
 p.showTimeText {
-  font-family: Verdana;
+  font-size: 80%;
+  text-align: left;
 }
 
 /*Thumbnail*/
