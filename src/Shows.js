@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import Show from './Show.js'
+import Show from './Show.js';
 import './App.css';
 import './Shows.css';
 
 class Shows extends Component {
+    constructor (props) {
+        super(props);
+    }
+
     getResponse() {
         //so the API url is this https://api.mixcloud.com/planetboo/cloudcasts/
         var xmlHttp = new XMLHttpRequest();
@@ -22,7 +26,7 @@ class Shows extends Component {
     }
 
     renderShow(props) {
-        return <Show data={props}></Show>
+        return <Show data={props}></Show>;
     }
 
     render () {

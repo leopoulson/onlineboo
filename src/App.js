@@ -6,17 +6,47 @@ import './App.css';
 
 class App extends Component {
 
-    
+    constructor(props) {
+        super(props);
+        this.state = {
+            showsShown: true,
+            blogShown: false
+        };
+
+        this.showBlog = this.showBlog.bind(this);
+        this.showShows = this.showShows.bind(this);
+    }
+
+    showBlog() {
+        this.setState({
+            showsShown: false,
+            blogShown : true
+        });
+    }
+
+    showShows() {
+        this.setState({
+            showsShown: true,
+            blogShown: false
+        });
+    }
+
     render() {
+        let showContent;
+
+
+        if (this.state.showsShown) showContent = <Shows/>;
+        else if (this.state.blogShown) showContent = null; //This will get changed to <Blog/>
+
         return (
             <div className="App">
                 <div className="Content">
                     <div className="SideBar">
                         <img src={boopic} className="LogoStyle" alt="boo"/>
-                        <Buttons/>
+                      <Buttons showBlog={this.showBlog} showShows={this.showShows}/>
                     </div>
-                    <div className="ShowBar">
-                        <Shows/>
+                  <div className="ShowBar">
+                       {showContent}
                     </div>
                 </div>
             </div>
