@@ -10,8 +10,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showsShown: true,
-            blogShown: false
+            showsShown: false,
+            blogShown: true
         };
 
         this.showBlog = this.showBlog.bind(this);

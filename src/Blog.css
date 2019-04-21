@@ -1,3 +1,5 @@
+/* Main blog */
+
 div.BlogTitle {
     width: 100%;
     height: 70px;
@@ -7,3 +9,22 @@ p.BlogTitleText {
     font-size: 100%;
     text-align: left;
 }
+
+/* Posts */
+
+div.info {
+    width: 100%;
+}
+
+div.post {
+    width: 100%;
+    background: #deaede;
+    margin: 5px;
+}
+
+div.postDivider {
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+}
+

@@ -30,7 +30,6 @@ class Shows extends Component {
     }
 
     render () {
-        this.selectedIndex = -1;
         var shows = this.getUploads();
         return (<div>
             {shows.map((show) => this.renderShow(show))}
