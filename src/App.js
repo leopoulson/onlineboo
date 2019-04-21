@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import boopic from './boopic.jpg';
 import Buttons from './Buttons.js';
 import Shows from './Shows.js';
+import Blog from './Blog.js';
 import './App.css';
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
 
 
         if (this.state.showsShown) showContent = <Shows/>;
-        else if (this.state.blogShown) showContent = null; //This will get changed to <Blog/>
+        else if (this.state.blogShown) showContent = <Blog/>;
 
         return (
             <div className="App">

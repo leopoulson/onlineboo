@@ -1,0 +1,9 @@
+div.BlogTitle {
+    width: 100%;
+    height: 70px;
+}
+
+p.BlogTitleText {
+    font-size: 100%;
+    text-align: left;
+}
